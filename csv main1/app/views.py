@@ -6,14 +6,14 @@ from . models import *
 # one parameter named request
 def profile_upload(request):
     # declaring template
-    template = "profile_upload.html"
+    
     
 # prompt is a context variable that can have different values      depending on their context
     prompt={'order':'Order of the CSV should be name,email,address,phone,profile'}
     
     # GET request returns the value of the data with the specified key.
     if request.method == "GET":
-        return render(request, template, prompt)
+        return render(request, 'profile_upload.html', prompt)
     csv_file = request.FILES['file']
     # let's check if it is a csv file
     if not csv_file.name.endswith('.csv'):
@@ -31,4 +31,4 @@ def profile_upload(request):
         profile=column[4]
     )
     context = {}
-    return render(request, template, context)
+    return render(request, 'profile_upload.html', context)

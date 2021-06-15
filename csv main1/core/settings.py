@@ -55,7 +55,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\pravin\csv main\csv main1\book\template'],
+        'DIRS': [r'C:\Users\pravin\csv main\csv main1\app\template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
