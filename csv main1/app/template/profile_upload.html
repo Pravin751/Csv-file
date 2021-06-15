@@ -13,7 +13,8 @@
             </div>
         {% endfor %}
     {% else %}
-   
+    <center>
+   <h2>Upload Csv form</h2>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <label for="file1"> Upload a file</label>
@@ -22,5 +23,6 @@
         <button type="submit">Upload</button>
     </form>
     {% endif %}
+</center>
 </body>
 </html>
